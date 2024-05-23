@@ -33,10 +33,7 @@ $(".btn").click(function () {
   animatePress(userChosenColor);
   playSound(userChosenColor);
   index++;
-  console.log(level)
-  console.log(index)
   if (index === level && level != 0 && index != 0) {
-    console.log("Called");
     answer = checkAnswer(index);
     if (answer === true) {
       setTimeout(function () {
@@ -56,7 +53,7 @@ function animatePress(currentColor) {
   }, 100);
 }
 
-$(document).keydown(function () {
+$("#start").click(function () {
   setTimeout(function () {
     nextSequence();
   }, 1000);
@@ -64,8 +61,6 @@ $(document).keydown(function () {
 
 function checkAnswer() {
   for (let i = 0; i <= index; i++) {
-    console.log(gamePattern[i]);
-    console.log(userClickedPattern[i]);
     if (gamePattern[i] != userClickedPattern[i]) {
       return false;
     }
@@ -82,7 +77,7 @@ function playSound(name) {
 }
 
 function gameOver() {
-  $("h1").text("Game Over Press any key to start again");
+  $("h1").text("Game Over Press start to start again");
   gamePattern.length = 0;
   userClickedPattern.length = 0;
   level = 0;
