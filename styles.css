@@ -6,7 +6,7 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin: 5%;
   color: #FEF2BF;
 }
 
@@ -24,6 +24,20 @@ body {
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+}
+
+.btn2 {
+  margin: 25px;
+  display: inline-block;
+  height: 50px;
+  width: 150px;
+  border: 10px solid black;
+  border-radius: 20%;
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+
 }
 
 .game-over {
@@ -45,6 +59,10 @@ body {
 
 .yellow {
   background-color: yellow;
+}
+
+.start {
+  background-color: purple;
 }
 
 .pressed {
